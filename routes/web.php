@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\Api;
 use Illuminate\Support\Facades\Route;
 use Inertia\Inertia;
 /*
@@ -22,3 +23,5 @@ Route::get('/{vue_capture?}', function() {
 Route::view('show',function(){
     return Inertia::render('Login');
 });
+
+Route::post('/login',[Api::class,'login']);
